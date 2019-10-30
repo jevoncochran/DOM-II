@@ -80,4 +80,22 @@ document.addEventListener('wheel', (event) => {
     event.target.style.backgroundColor = 'purple';
 })
 
+const getNav = document.querySelectorAll('a');
+
+// getNav.forEach(a => {
+//     a.addEventListener('click', () => {
+//         a.preventDefault();
+//     })
+// })
+
+const introImg = document.querySelector('intro-img');
+
+introImg.addEventListener('mouseenter', (event) => {
+    TweenMax.to('introImg', 1, {
+        rotationY: 180,
+     filter: 'none',
+         ease: Elastic.easeOut.config( 1, 0.75)
+       })
+})
+
 
